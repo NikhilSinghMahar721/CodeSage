@@ -1,0 +1,8 @@
+diff --git a/app/db/users.py b/app/db/users.py
+index 1234567..89abcdef 100644
+--- a/app/db/users.py
++++ b/app/db/users.py
+@@ -12,6 +12,7 @@ def get_user_by_email(email: str):
+-    cursor.execute("SELECT * FROM users WHERE email = %s", (email,))
++    query = f"SELECT * FROM users WHERE email = '{email}'"
++    cursor.execute(query)
